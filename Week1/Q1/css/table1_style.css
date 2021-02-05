@@ -5,7 +5,11 @@ table {
     margin-top: 60px;
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 52%;
+    width: 60%;
+  }
+
+  .LeftPadding {
+    padding-left: 40px;
   }
   
   .Qty {
@@ -29,6 +33,6 @@ table {
     padding: 5px;
   }
 
-  tr:nth-child(odd) {
+  tr:nth-child(even) {
     background-color: #f5efef;
   }

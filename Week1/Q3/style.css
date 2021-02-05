@@ -1,44 +1,52 @@
-.OuterBox {
+.FlexContainer {
+  width: 500px;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 50px;
-  background-color: pink;
-  width: 500px;
-  height: 500px;
 }
 
+.F1 {
+    display: flex;
+}
+.F2 {
+    display: flex;
+}
+.F2_1 {
+    display: flex;
+    flex-direction: column;
+}
 .box1 {
-    background-color: red;
+    background-image: url("Images/img1.jpg");
+    background-size: 250px 150px;
     width: 250px;
     height: 150px;
 }
 
 .box2 {
-    background-color: seagreen;
+    background-image: url("Images/img2.jpg");
+    background-size: 250px 150px;
+    width: 250px;
+    height: 150px;
+}
+
+.box3 {
+    background-image: url("Images/img3.jpg");
+    background-size: 200px 350px;
     width: 200px;
     height: 350px;
 }
 
-.box3 {
-    background-color: slateblue;
-    margin-left: 200px;
-    margin-top: -50px;
+.box4 {
+    background-image: url("Images/img5.webp");
+    background-size: 300px 50px;
     width: 300px;
     height: 50px;
 }
 
-.box4 {
-    background-color: tan;
-    margin-left: 200px;
-    margin-top: -350px;
+.box5 {
+    background-image: url("Images/img4.jpg");
+    background-size: 300px 300px;
     width: 300px;
     height: 300px;
-}
-
-.box5 {
-    background-color: green;
-    margin-left: 250px;
-    margin-top: -450px;
-    width: 250px;
-    height: 150px;
 }
