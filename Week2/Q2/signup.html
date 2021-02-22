@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sign Up</title>
+    <link href="css/signupstyle.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+    <form name="myform" onsubmit="validation()" method="POST">
+        <div class="container">
+            <h1 style="text-align: center;">Sign Up</h1>
+            <hr>
+
+            <div class="form-control">
+                <label for="name"><b>Name</b></label>
+                <input type="text" placeholder="Enter your name" id="name" name="name" autofocus>
+                <small>Error Msg</small>
+            </div>
+
+            <div class="form-control">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter your email" id="email" name="email">
+            </div>
+
+            <div class="form-control">
+                <label for="phone"><b>Mobile</b></label>
+                <input type="text" placeholder="Enter your number" id="phone" name="phone">
+            </div> 
+
+            <label for="dob"><b>Date of Birth</b></label>
+            <input type="date" name="dob" required><br><br>
+
+            <div class="form-control">
+                <label for="pwd"><b>Password</b></label>
+                <input type="password" placeholder="Enter your password" id="psw" name="psw">
+            </div>
+
+            <div class="form-control">
+                <label for="confirmpwd"><b>Confirm Password</b></label>
+                <input type="password" placeholder="Enter your password again" id="cpsw" name="cpsw">
+            </div>
+
+            <b>Please select your gender:</b>
+            <input type="radio" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" name="gender" value="female" required>
+            <label for="male">Female</label><br><br>
+
+            <div class="buttons">
+                <button type="button" onclick="window.location = 'index.html';" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="js/signup.js" ></script>
+</body>
+</html>
