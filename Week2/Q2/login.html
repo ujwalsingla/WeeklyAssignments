@@ -8,22 +8,31 @@
 
 <body>
     <h1 style="text-align: center;">Login Form</h1>
-    <form action="welcome.html" method="POST">
+    <form name="loginform">
         <div class="imgcontainer">
             <img src="Images/login.png" alt="login" class="loginavatar">
         </div>
 
         <div class="container">
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter your email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-             title="Invalid email" required>
+            <div class="form-control">
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter your email" id="email" name="email">
+                <small>Error Msg</small>
+            </div>
 
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+            <div class="form-control">
+                <label for="pwd"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" id="pwd" name="pwd">
+                <small>Error Msg</small>
+            </div>
 
-            <button type="submit">Submit</button>
+            <button type="button" onclick="validation()">Submit</button>
+            <div  style="text-align: center;">
+                <a href="signup.html" style="text-decoration: none;">Go to SignUp Page.</a>
+            </div>
         </div>
     </form>
+
+    <script src="js/login.js" ></script>
 </body>
 </html>

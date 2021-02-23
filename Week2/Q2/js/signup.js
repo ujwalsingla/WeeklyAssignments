@@ -1,9 +1,11 @@
-function validation() {
+function validation(form) {
         var uname = document.getElementById("full_name").value;
         var email = document.getElementById("email").value;
         var phone = document.getElementById("phone").value;
-		var pwd = document.getElementById("psw").value;
-        var cpwd = document.getElementById("cpsw").value;
+		var pwd = document.getElementById("pwd").value;
+        var cpwd = document.getElementById("cpwd").value;
+		var dob = document.getElementById("dob").value;
+		var gen = myform.querySelectorAll('input[name="gender"]:checked');
 
         var letters = /^[A-Za-z\s]+$/;
         var numbers = /^[0-9]+$/;
@@ -17,65 +19,97 @@ function validation() {
 		}
         else if(!letters.test(uname))
 		{
-			alert("In Name enter the alphabets only.");
+			//alert("In Name enter the alphabets only.");
+			setErrorMsg(document.getElementById("full_name"), 'Enter the alphabets only.');
 			return;
+		}
+		else if(uname!=''){
+			setErrorMsg(document.getElementById("full_name"), '');
 		}
 
 		if(email=='')
 		{
-        	alert("Enter the email");
+        	//alert("Enter the email");
+			setErrorMsg(document.getElementById("email"), 'Email cannot be empty');
 			return;
 		}
 		else if(!filter.test(email))
 		{
-			alert("Enter valid email id.");
+			setErrorMsg(document.getElementById("email"), 'Enter valid email id.');
 			return;
+		}
+		else if(email!=''){
+			setErrorMsg(document.getElementById("email"), '');
 		}
 
         if(phone=='')
 		{
-        	alert("Enter the Mobile Number");
+			setErrorMsg(document.getElementById("phone"), 'Enter the Mobile Number');
 			return;
 		}
 		else if(!numbers.test(phone))
 		{
-			alert("In Mobile enter the numeric values only.");
+			setErrorMsg(document.getElementById("phone"), 'Enter the numeric values only.');
 			return;
+		}
+		else if(phone!=''){
+			setErrorMsg(document.getElementById("phone"), '');
+		}
+
+		if(dob =='')
+		{
+			setErrorMsg(document.getElementById("dob"), 'DOB cannot be empty');
+			return;
+		}
+		else if(dob!=''){
+			setErrorMsg(document.getElementById("dob"), '');
 		}
 
         if(pwd=='')
 		{
-        	alert("enter the password");
+			setErrorMsg(document.getElementById("pwd"), 'Enter the password');
 			return;
 		}
 		else if(!pass.test(pwd))
 		{
-			alert("Password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.");
+			setErrorMsg(document.getElementById("pwd"), 'Password between 6 to 20 characters which contain at least one numeric digit, one uppercase and one lowercase letter.');
 			return;
+		}
+		else if(pwd!=''){
+			setErrorMsg(document.getElementById("pwd"), '');
 		}
 
         if(cpwd=='')
         {
-            alert("Enter the Confirm Password");
+			setErrorMsg(document.getElementById("cpwd"), 'Enter the confirm password');
 			return;
         }
         else if(pwd!=cpwd)
         {
-            alert("Password not matched with Confirm Password.");
+			setErrorMsg(document.getElementById("cpwd"), 'Password not matched with Confirm Password.');
 			return;
         }
+		else if(cpwd!=''){
+			setErrorMsg(document.getElementById("cpwd"), '');
+		}
+
+		if(!gen.length)
+		{
+			setErrorMsg(document.getElementById("gen"), 'Enter the Gender.');
+			return;
+		}
 
 		alert('Thank You for Login');
-		location.href = "https://www.campuslife.co.in";
+		location.href = "welcome.html";
 }
 
 function setErrorMsg(input, errormsgs) {
-	console.log(input.parentElement);
+	//console.log(input.parentElement);
 	const formControl = input.parentElement;
 	const small = formControl.querySelector('small');
 	formControl.className = "form-control error";
-	console.log(small);
-	small.innerHTML = errormsgs;
+	//console.log(small);
+	small.innerText = errormsgs;
 }
 
 /*let arr = [];

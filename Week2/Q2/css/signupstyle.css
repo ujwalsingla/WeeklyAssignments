@@ -20,9 +20,8 @@ input[type=text], input[type=password] {
 
 .form-control small {
     color: red;
-    position: absolute;
-    bottom: 0;
-    left: 0;
+    position: relative;
+    bottom: 5px;
     visibility: hidden;
 }
 
@@ -52,7 +51,7 @@ button:hover {
 
 .cancelbtn, .signupbtn {
     float: left;
-    width: 50%;
+    width: 100%;
 }
 
 .container {

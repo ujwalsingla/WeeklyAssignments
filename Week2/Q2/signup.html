@@ -23,35 +23,48 @@
             <div class="form-control">
                 <label for="email"><b>Email</b></label>
                 <input type="text" placeholder="Enter your email" id="email" name="email">
+                <small>Error Msg</small>
             </div>
 
             <div class="form-control">
                 <label for="phone"><b>Mobile</b></label>
                 <input type="text" placeholder="Enter your number" id="phone" name="phone">
+                <small>Error Msg</small>
             </div> 
 
-            <label for="dob"><b>Date of Birth</b></label>
-            <input type="date" name="dob" required><br><br>
+            <div class="form-control">
+                <label for="dob"><b>Date of Birth</b></label>
+                <input type="date" id="dob" name="dob"><br><br>
+                <small>Error Msg</small>
+            </div>
 
             <div class="form-control">
                 <label for="pwd"><b>Password</b></label>
-                <input type="password" placeholder="Enter your password" id="psw" name="psw">
+                <input type="password" placeholder="Enter your password" id="pwd" name="pwd">
+                <small>Error Msg</small>
             </div>
 
             <div class="form-control">
                 <label for="confirmpwd"><b>Confirm Password</b></label>
-                <input type="password" placeholder="Enter your password again" id="cpsw" name="cpsw">
+                <input type="password" placeholder="Enter your password again" id="cpwd" name="cpwd">
+                <small>Error Msg</small>
             </div>
 
-            <b>Please select your gender:</b>
-            <input type="radio" name="gender" value="male" required>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" value="female" required>
-            <label for="male">Female</label><br><br>
+            <div class="form-control">
+                <b>Please select your gender:</b>
+                <input type="radio" name="gender" id="gen" value="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="gen" value="female">
+                <label for="male">Female</label><br><br>
+                <small>Error Msg</small>
+            </div>
 
             <div class="buttons">
-                <button type="button" onclick="window.location = 'index.html';" class="cancelbtn">Cancel</button>
+                <!-- <button type="button" onclick="window.location = 'index.html';" class="cancelbtn">Cancel</button> -->
                 <button type="button" onclick="validation()" class="signupbtn">Sign Up</button>
+                <div  style="text-align: center;">
+                    <a href="login.html" style="text-decoration: none;">Go to Login Page.</a>
+                </div>
             </div>
         </div>
     </form>

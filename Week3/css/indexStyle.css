@@ -1,0 +1,166 @@
+* {
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+div {
+    display: block;
+}
+
+.header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    z-index: 9;
+    -moz-transition: opacity 0.7s ease;
+    -o-transition: opacity 0.7s ease;
+    -webkit-transition: opacity 0.7s ease;
+    transition: opacity 0.7s ease;
+}
+
+.header .icon-menu {
+    display: none;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.header.fixed {
+    z-index: 10;
+    top: -110px;
+    position: fixed;
+    opacity: 0;
+    box-shadow: 2px 2px 6px rgb(0 0 0 / 20%);
+    background: #fff;
+}
+
+.header ul li {
+    display: inline-block;
+    padding: 0 18px;
+    cursor: pointer;
+}
+
+.indexPage .intro {
+    height: 90vh;
+    min-height: 460px;
+    max-height: 750px;
+    background-position: center 75%;
+}
+.intro {
+    width: 100%;
+    height: 40vh;
+    min-height: 360px;
+    max-height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.footer {
+    background: #102749;
+    height: 165px;
+    width: 100%;
+    position: relative;
+}
+
+.footer .stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.footer .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 60px;
+}
+
+.get-in-touch {
+    position: absolute;
+    right: 60px;
+}
+
+.get-in-touch h5 {
+    position: relative;
+    right: 180px;
+    margin-right: 36px;
+}
+
+.footer h5 {
+    display: block;
+    color: #fff;
+    font-size: 1em;
+    line-height: 160px;
+    right: 60px;
+    position: absolute;
+    font-weight: 700;
+}
+
+.footer h5 span {
+    font-size: 0.8em;
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+.get-in-touch .social {
+    position: absolute;
+    right: 0;
+    top: 52px;
+}
+
+.icon-twitter:before {
+    content: "\ea96";
+}
+
+.footer .social a {
+    color: #fff;
+    font-size: 31px;
+    margin-right: 10px;
+    margin-top: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon-facebook:before {
+    content: "\ea90";
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ujwal-credit {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    font-size: 10px;
+    color: rgba(255,255,255,0.15);
+    text-align: center;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+}
