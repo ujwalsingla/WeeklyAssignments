@@ -9,14 +9,14 @@
 </head>
 
 <body>
-    <form name="myform" onsubmit="validation()" method="POST">
+    <form name="myform">
         <div class="container">
             <h1 style="text-align: center;">Sign Up</h1>
             <hr>
 
             <div class="form-control">
                 <label for="name"><b>Name</b></label>
-                <input type="text" placeholder="Enter your name" id="name" name="name" autofocus>
+                <input type="text" placeholder="Enter your name" id="full_name" name="name" autofocus>
                 <small>Error Msg</small>
             </div>
 
@@ -51,7 +51,7 @@
 
             <div class="buttons">
                 <button type="button" onclick="window.location = 'index.html';" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Sign Up</button>
+                <button type="button" onclick="validation()" class="signupbtn">Sign Up</button>
             </div>
         </div>
     </form>
