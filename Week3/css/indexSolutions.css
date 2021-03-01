@@ -1,0 +1,218 @@
+.indexPage .solutions {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 70px;
+}
+.solutions {
+    transition: background-image 0.3s ease-out;
+}
+
+.indexPage .solutions .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    /* z-index: 1; */
+    top: 0;
+    left: 0;
+}
+
+.indexPage .solutions h1 {
+    padding-bottom: 10px;
+    position: relative;
+    /* z-index: 2; */
+    color: #fff;
+}
+
+.indexPage .solutions p {
+    text-align: center;
+    position: relative;
+    /* z-index: 2; */
+    color: #fff;
+    margin-top: 2em;
+    line-height: 1.4;
+}
+
+.indexPage .solutions .box {
+    width: 100%;
+    height: auto;
+    margin-top: 65px;
+    /* z-index: 2; */
+    position: relative;
+}
+
+.indexPage .solutions .box ul {
+    float: left;
+    border-right: 2px solid #FFAF00;
+    width: 18%;
+}
+
+.indexPage .solutions .box ul li {
+    display: block;
+    font-size: 1em;
+    /* color: #fff; */
+    padding: 18px 0;
+    font-weight: 700;
+    cursor: pointer;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    /* -webkit-transition: all 0.3s ease; */
+    transition: all 0.3s ease;
+}
+
+.indexPage .solutions .box ul .Banking{
+    color: #ffaf00;
+}
+
+.indexPage .solutions .box ul .Agriculture{
+    color: white;
+}
+
+.indexPage .solutions .box ul .Agriculture:hover{
+    color: #9ec000;
+}
+
+.indexPage .solutions .box ul .Health{
+    color: white;
+}
+
+.indexPage .solutions .box ul .Health:hover{
+    color: #21b334;
+}
+
+.indexPage .solutions .box ul .FMCG{
+    color: white;
+}
+
+.indexPage .solutions .box ul .FMCG:hover{
+    color: #00b0bd;
+}
+
+.indexPage .solutions .box ul .Government{
+    color: white;
+}
+
+.indexPage .solutions .box ul .Government:hover{
+    color: #10a1df;
+}
+
+.indexPage .solutions .box ul .MSME{
+    color: white;
+}
+
+.indexPage .solutions .box ul .MSME:hover{
+    color: #0767b2;
+}
+
+.indexPage .solutions .box ul .Retail{
+    color: white;
+}
+
+.indexPage .solutions .box ul .Retail:hover{
+    color: #0f4ef7;
+}
+
+script {
+    display: none;
+}
+
+.indexPage .solutions .box .right {
+    width: 82%;
+    padding-left: 40px;
+}
+.right {
+    float: right;
+}
+
+.indexPage .solutions .box .right img {
+    margin-top: 30px;
+    height: 60px;
+    display: block;
+}
+
+.indexPage .solutions .box .right h3 {
+    padding: 10px 0;
+    /* color: #fff; */
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1.25;
+}
+
+.indexPage .solutions .box .right p {
+    color: #fff;
+    font-size: 1em;
+    text-align: left;
+    line-height: 1.25;
+}
+
+.indexPage .solutions .box .right .readmore {
+    /* color: #FFAF00; */
+    margin-top: 30px;
+    border: 2px solid #FFAF00;
+}
+
+.readmore {
+    font-size: 1em;
+    border-radius: 25px;
+    padding: 5px;
+    font-variant: small-caps;
+    width: 200px;
+    letter-spacing: 0.15em;
+    background-color: transparent;
+    color: #ffaf00;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.readmore:hover{
+    color: white;
+    background-color: #ffaf00;
+}
+
+.solution_bottom p {
+    font-size: 18px;
+}
+
+.solution_bottom_link1, .solution_bottom_link2, .solution_bottom_link3 {
+    color: #ffaf00;
+    background: transparent;
+    border: 2px solid #ffaf00;
+    padding: 5px 15px;
+    border-radius: 30px;
+    text-align: center;
+    text-decoration: none;
+    margin: 3px 5px;
+    font-size: 16px;
+}
+
+.solution_bottom_link1 {
+    color: #ffaf00;
+    border: 2px solid #ffaf00;
+}
+
+.solution_bottom_link2 {
+    color: #00b0bd;
+    border: 2px solid #00b0bd;
+}
+
+.solution_bottom_link3 {
+    color: #9ec000;
+    border: 2px solid #9ec000;
+}
+
+.solution_bottom_link1:hover {
+    background-color: #ffaf00;
+    color: white;
+}
+
+.solution_bottom_link2:hover {
+    background-color: #00b0bd;
+    color: white;
+}
+
+.solution_bottom_link3:hover {
+    background-color: #9ec000;
+    color: white;
+}
