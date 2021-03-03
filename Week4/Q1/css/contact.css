@@ -1,0 +1,184 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+}
+
+.header-sm {
+  display: none;
+}
+
+.header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.active {
+  display: none;
+  z-index: 3;
+  background-color: white;
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  transition: background-color 0.3s ease-in-out;
+  box-shadow: 1px 1px 8px grey;
+}
+
+.active .others {
+  width: fit-content;
+  height: 100px;
+  color: blue;
+  float: right;
+  justify-content: space-between;
+  display: flex;
+  margin-right: 60px;
+}
+
+.active .others .header-btn a {
+  color: blue;
+}
+
+.active .header-btn h3::before{
+  content: '';
+  background-color: blue;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.active .header-btn h3:hover:before{
+  width: 100%;
+}
+
+.logo-img {
+  height: 58px;
+  width: 189px;
+  margin: 21px 0px 21px 60px;
+}
+
+.others {
+  width: fit-content;
+  height: 100px;
+  color: white;
+  float: right;
+  justify-content: space-between;
+  display: flex;
+  margin-right: 60px;
+}
+
+.header-btn {
+  margin: auto 15px auto 15px;
+}
+
+.header-btn h3 {
+  position: relative;
+  font-weight: 300;
+}
+
+.header .header-btn h3::before{
+  content: '';
+  background-color: white;
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  top: 100%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  transition: all 0.3s ease-in-out;
+}
+
+.header .header-btn h3:hover::before{
+  width: 100%;
+}
+
+.header-btn a {
+  color: white;
+}
+
+.intro {
+  height: 60vh;
+  background: url("http://www.nfrnds.com/wp-content/uploads/2017/07/main_bg.jpg");
+  background-size: 100% 100%;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.intro-info {
+  text-align: center;
+  color: white;
+  height: fit-content;
+  width: 100%;
+}
+
+.intro-info h1 {
+  font-size: 4.5em;
+  line-height: 2;
+}
+
+.contact-info {
+  width: 100%;
+  height: 520px;
+  background-color: white;
+}
+
+.contact-info-inner-div {
+  height: inherit;
+  width: 55%;
+  background-color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  height: inherit;
+  width: fit-content;
+  /* margin-left: 50px; */
+  margin-right: 100px;
+}
+
+.left img {
+  margin-top: 200px;
+  height: 70px;
+  width: 200px;
+}
+
+.right {
+  height: inherit;
+  width: max-content;
+  padding-top: 100px;
+}
+
+.right p,
+a {
+  font-size: 1.2em;
+  color: black;
+}
+
+.icon-image {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  background: none;
+}
+
+#map {
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* background-color:black; */
+}
+
+

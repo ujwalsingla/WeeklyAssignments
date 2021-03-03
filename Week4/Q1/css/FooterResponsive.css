@@ -1,0 +1,40 @@
+@media screen and (max-width: 768px) {
+    .footer {
+        height: 210px;
+        text-align: center;
+    }
+    .footer .stars {
+        display: none;
+    }
+    .footer .logo {
+        left: 0;
+        position: static;
+        margin-top: 40px;
+    }
+    .get-in-touch {
+        right: 0;
+        left: 0;
+    }
+    .get-in-touch h5 {
+        position: static;
+        margin-right: 0;
+    }
+    .get-in-touch .social {
+        left: 0;
+    }
+    .icons{
+        left: 0;
+        top: 20px;
+        bottom: 0;
+        right: 0;
+    }
+    body, html {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        direction: ltr;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    }

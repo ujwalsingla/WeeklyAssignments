@@ -1,0 +1,83 @@
+.footer {
+    background: #102749;
+    /* background: black; */
+    height: 165px;
+    width: 100%;
+    position: relative;
+}
+
+.footer .stars {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+}
+
+.footer .logo {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    left: 60px;
+}
+
+.get-in-touch {
+    position: absolute;
+    right: 60px;
+}
+
+.get-in-touch h5 {
+    position: relative;
+    right: 180px;
+    margin-right: 36px;
+    height: 100px;
+}
+
+.footer h5 {
+    display: block;
+    color: #fff;
+    font-size: large;
+    line-height: 160px;
+    font-weight: 700;
+}
+
+.footer h5 span {
+    font-size: 0.8em;
+    margin-left: 30px;
+    font-weight: 400;
+}
+
+.icons{
+    position: absolute;
+    top:70px;
+    left:70px;
+}
+
+.icon-image {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    background: none;
+  }
+
+.ujwal-credit {
+    position: absolute;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 16px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.15);
+    text-align: center;
+}
+
+.ujwal-credit a{
+    transition: color 0.5s linear;
+    color: black;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.ujwal-credit a:hover{
+    color: white;
+}
