@@ -106,14 +106,23 @@
     }
   }
   
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 499px) {
     .about_one_heading_image_1 {
-      width: 300px;
+      width: 80%;
     }
     .about .team .circles .circle {
       display: inline-block;
       width: 97%;
       vertical-align: top;
       margin: 20px 0;
+    }
+    .toptext{
+      width: 95%;
+    }
+  }
+
+  @media screen and (min-width: 500px) {
+    .about_one_heading_image_1 {
+      width: 80%;
     }
   }
