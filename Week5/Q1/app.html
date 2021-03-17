@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>N-Frnds | App</title>
+    <link rel="stylesheet" href="css/indexStyle.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/indexPartnersPress.css">
+    <link rel="stylesheet" href="css/indexSolutions.css">
+    <link rel="stylesheet" href="css/indexWho.css">
+
+    <link rel="stylesheet" href="css/solutionsResponsive.css">
+    <link rel="stylesheet" href="css/FooterResponsive.css">
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Titillium+Web:300,400,700" rel="stylesheet">
+    <link rel="profile" href="http://gmpg.org/xfn/11">
+    <link rel="shortcut icon" href="https://www.nfrnds.com/wp-content/themes/theme/img/favicon.ico">
+    <link rel='dns-prefetch' href='//s.w.org' />
+</head>
+
+<body>
+    <div class="header" id="header">
+        <a href="index.html">
+          <img class="logo-img" id="logo-img" src="images/logo.png" alt="logo-img" />
+        </a>
+        <div class="others">
+          <div class="header-btn">
+            <a style="text-decoration: none;" href="#">
+                <h3>About</h3></a>
+          </div>
+          <div class="header-btn">
+            <a style="text-decoration: none;" href="index.html#sols">
+                <h3>Solutions</h3></a>
+          </div>
+          <div class="header-btn">
+            <a style="text-decoration: none" href="#"
+              ><h3>Press</h3></a
+            >
+          </div>
+          <div class="header-btn">
+            <a style="text-decoration: none" href="#"
+              ><h3>Contact</h3></a
+            >
+          </div>
+        </div>
+    </div>
+
+    <div class="active" id="active">
+      <a href="index.html">
+        <img class="logo-img" id="logo-img" src="images/logo_fixed.png" alt="logo-img" />
+      </a>
+      <div class="others">
+        <div class="header-btn">
+          <a style="text-decoration: none;" href="#">
+              <h3>About</h3></a>
+        </div>
+        <div class="header-btn">
+          <a style="text-decoration: none;" href="index.html#sols">
+              <h3>Solutions</h3></a>
+        </div>
+        <div class="header-btn">
+          <a style="text-decoration: none" href="#"
+            ><h3>Press</h3></a
+          >
+        </div>
+        <div class="header-btn">
+          <a style="text-decoration: none" href="#"
+            ><h3>Contact</h3></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="success">
+      <p class="closebtn" style="margin: 0;padding: 0;">×</p>
+      You are <b>Successfully</b> logged in.
+    </div> -->
+
+    <div class="header-sm topnav" id="myTopnav">
+      <a href="index.html"><img src="images/logo_fixed.png" class="Active"></a>
+      <a href="javascript:void(0);" class="icon" onclick="myfunction()">&#9776;</a>
+      <a class="dropdown-links link1" href="#">About</a>
+      <a class="dropdown-links" href="index.html#sols">Solutions</a>
+      <a class="dropdown-links" href="#">Press</a>
+      <a class="dropdown-links link4" href="#">Contact</a>
+    </div>
+    
+
+    <div class="indexPage">
+        <div class="intro">
+            <div class="intro-info">
+              <h1>Coming Soon...</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <img
+          class="stars"
+          src="images/footer_stars.svg" alt="footer-stars"
+        />
+        <img
+          class="logo"
+          src="images/footer_logo.svg" alt="footer-logo"
+        />
+        <div class="get-in-touch">
+          <h5>
+            Be in touch
+            <span>info@nfrnds.com</span>
+          </h5>
+          <div class="icons">
+            <a href="#"
+              ><img class="icon-image" src="images/twitter.png" alt="twitter"
+            /></a>
+            <a href="#"
+              ></a><img class="icon-image" src="images/facebook.png" alt="facebook"
+            /></a>
+            <a href="http://facebook.com/gonfrnds"
+              ><img class="icon-image" src="images/youtube.png" alt="youtube"
+            /></a>
+            <a href="#"
+              ><img class="icon-image" src="images/medium.png" alt="medium"
+            /></a>
+          </div>
+        </div>
+        <p class="ujwal-credit">
+          Designed by
+          <a href="#" target="_blank">Studio Ujwal</a>
+        </p>
+    </div>
+
+    <script>
+        window.addEventListener("scroll", function () {
+          let header = document.querySelector(".header");
+          var x = window.matchMedia("(min-width: 769px)");
+          var windowPosition = window.scrollY > 100;
+          if(x.matches){
+            if (windowPosition) {
+              document.getElementById("header").style.display="none";
+              document.getElementById("active").style.display="block";
+
+            } else {
+              document.getElementById("header").style.display="block";
+              document.getElementById("active").style.display="none";
+            }
+          }
+        });
+
+        function myFunction(x) {
+          if (x.matches) { // If media query matches
+            document.getElementById("header").style.display="block";
+            document.getElementById("active").style.display="none";
+            document.getElementById("myTopnav").style.display="none";
+          } 
+          else {
+              document.getElementById("header").style.display="none";
+              document.getElementById("active").style.display="none";
+              document.getElementById("myTopnav").style.display="block";
+          }
+        }
+
+        function myfunction() {
+  // var x = document.getElementById("myTopnav");
+  if (document.getElementById("myTopnav").className === "header-sm topnav") {
+    document.getElementById("myTopnav").className += " responsive";
+  } else {
+    document.getElementById("myTopnav").className = "header-sm topnav";
+  }
+}
+
+        var x = window.matchMedia("(min-width: 769px)")
+        myFunction(x) // Call listener function at run time
+        x.addListener(myFunction)
+    </script>
+</body>
+
+</html>

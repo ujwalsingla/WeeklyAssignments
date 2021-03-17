@@ -1,0 +1,116 @@
+.indexPage .partners {
+    padding-bottom: 80px;
+}
+
+.partner-logo{
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 85%;
+}
+
+.partner-logo img{
+    filter: grayscale(100%);
+    object-fit: contain;
+    width: 145px;
+    height: 60px;
+    /* height: 100px;
+    width: 100px; */
+}
+
+.partner-logo img:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.indexPage .press {
+    padding-bottom: 30px;
+    background-color: #124ea0;
+    *zoom: 1;
+    background-size: 100%;
+    background-image: linear-gradient(to right, #124ea0 0%, #15b2d1 100%);
+}
+
+.indexPage .press .wrapper {
+    max-width: 1000px;
+}
+
+.indexPage .press h1 {
+    color: #fff;
+}
+
+.indexPage .press .articles {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.indexPage .press .articles .article {
+    width: 33%;
+    float: left;
+    padding: 0 30px;
+}
+
+.indexPage .press .articles .article h2 {
+    color: #fff;
+    line-height: 1.25;
+    font-size: 1em;
+    font-weight: 700;
+}
+
+.indexPage .press .articles .article h3 {
+    font-size: 0.7em;
+    color: #fff;
+    line-height: 1.25;
+    padding: 10px 0;
+}
+
+.indexPage .press .articles .article a {
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    font-size: 0.7em;
+    text-decoration: none;
+}
+
+.indexPage .press .articles .line {
+    clear: both;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.2);
+    margin-top: 40px;
+}
+
+.indexPage .press .articles .readall {
+    font-variant: small-caps;
+    font-size: 1em;
+    color: #fff;
+    display: block;
+    text-align: center;
+    line-height: 1;
+    padding-top: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    .indexPage .press .articles {
+        margin-top: 10px;
+    }
+
+    .indexPage .press .articles .article {
+        width: 100%;
+        padding: 0;
+        padding-bottom: 30px;
+    }
+    
+    .partners h1{
+        font-size: 2.5em !important;
+    }
+    .partner-logo{
+        display: block;
+        width: fit-content;
+    }
+    .partner-logo .partner-logo-image{
+        margin-bottom: 50px;
+    }
+}

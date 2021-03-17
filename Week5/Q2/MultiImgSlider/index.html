@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slider</title>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+    <div class="slider">
+        <button class="leftArrow" id="prev"><img src="images/leftarrow.png"></button>
+        <div class="slider-container">
+            <div class="slider-img-container">
+                <div class="group active">
+                    <div><img src="images/partner1.png"></div>
+                    <div><img src="images/partner2.png"></div>
+                    <div><img src="images/partner3.png"></div>
+                    <div><img src="images/partner4.jpg"></div>
+                    <div><img src="images/partner5.png"></div>
+                </div>
+                <div class="group">
+                    <div><img src="images/partner6.png"></div>
+                    <div><img src="images/partner7.png"></div>
+                    <div><img src="images/partner8.jpg"></div>
+                    <div><img src="images/partner9.jpg"></div>
+                    <div><img src="images/partner10.png"></div>
+                </div>
+            </div>
+        </div>
+        <button class="rightArrow" id="next"><img src="images/rightarrow.png"></button>
+    </div>
+
+    <script>
+        var slides = document.getElementsByClassName("group");
+        var total_slides = slides.length;
+        var i, index=0;
+        // console.log(total_slides);
+        document.getElementById("next").addEventListener("click",function(){
+            for(i=0;i<total_slides;i++){
+                index+=1;
+                GoSlides();
+            }
+        })
+
+        document.getElementById("prev").addEventListener("click",function(){
+            for(i=0;i<total_slides;i++){
+                index-=1;
+                GoSlides();
+            }
+        })
+
+        function GoSlides(){
+            if(index > total_slides-1){
+                index=0;
+            }
+            if(index<0){
+                index=total_slides-1;
+            }
+
+            for(i=0;i<total_slides;i++){
+                slides[i].classList.remove("active");
+            }
+            slides[index].classList.add("active");
+        }
+    </script>
+</body>
+</html>

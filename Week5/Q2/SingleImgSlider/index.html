@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Single Img Slider</title>
+    <meta charset="utf-8">
+    <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="indexStyle.css">
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-container">
+            <div class="slider-images">
+                <div class="slides active"><img src="images/img1.jpg"></div>
+                <div class="slides"><img src="images/img2.jpg"></div>
+                <div class="slides"><img src="images/img3.jpg"></div>
+            </div>
+
+            <div class="indi">
+                <ul id="ul">
+                    <li class="active" onclick="GoSlides(0)"></li>
+                    <li onclick="GoSlides(1)"></li>
+                    <li onclick="GoSlides(2)"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        var slides = document.getElementsByClassName("slides");
+        // const carouselSlide = document.querySelector('.slider-images');
+        var total_slides = document.getElementsByClassName("slides").length;
+        var dots = ul.getElementsByTagName("li");
+        // console.log(dots);
+        var i,index = 0;
+
+        function GoSlides(x){
+            if(x > total_slides-1){
+                index=0;
+            }
+            if(x<0){
+                index=total_slides-1;
+            }
+            if(x<total_slides && x>=0){
+                index=x;
+            }
+
+            for(i=0;i<total_slides;i++){
+                dots[i].classList.remove("active");
+                slides[i].classList.remove("active");
+            }
+            dots[x].classList.add("active");
+            slides[x].classList.add("active");
+        }
+    </script>  
+</body>
+</html>
