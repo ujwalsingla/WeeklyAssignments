@@ -1,38 +1,54 @@
-$.ajaxSetup({
-    contentType: "application/json; charset=utf-8"
-  });
-   $('.userId').focus(()=>{
-       $('.error').css('display','none')
-   })
-  $(".submit").click(function(e){
-      e.preventDefault();
-      let p=$('input[name=userId]').val()
-      if(p==="" || p===null){
-          $('.error').css("display","block")
-          return false
+function validation(form) {
+    var phone = document.getElementById('phone').value;
+    
+    if(phone.length < 12) {
+      setErrorMsg(document.getElementById('phone'), 'Enter the valid Mobile Number');
+      return;
+    }
+
+    var body = {
+      "msisdn": document.getElementById('phone').value,
+      "loginType":"KAIZALA",
+      "groupId":"",
+      "KIS":"",
+      "actionPackageId":"",
+      "version":"",
+      "minorVersion":"",
+    }
+
+    $.ajax({
+    url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/login",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    data: JSON.stringify(body),
+    type: "POST",
+    error: function(res) {
+      console.log('User is Invalid!', res);
+    },
+    success: function(data) {
+      if(data.token) {
+        $.ajax({
+                                url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
+                                type: 'GET',
+                                headers: {"Netco-JWT": data.token},
+                                success:function(res){ 
+                                    sessionStorage.setItem('token',true );
+                                    alert('You are Successfully logged in.');
+                  window.location.href="./app.html"; }
+                              });
       }
-      if(p!=="919530697527"){
-          $('.error').html("Please Enter The correct userId******");
-          $('.error').css("display","block")
-          return false
+      else {
+        setErrorMsg(document.getElementById('phone'), 'User is Invalid!');
       }
-      $.ajax({
-          url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/login",
-          type: 'POST',
-          data: JSON.stringify({msisdn:`${p}`}),
-          error : function(err) { console.log('Error!', err) },
-          success: (data)=> {
-                if(data.token){
-                    $.ajax({
-                        url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
-                        type: 'GET',
-                        headers: {"Netco-JWT": data.token},
-                        success:function(res){
-                            sessionStorage.setItem('token',true );
-                            window.location.href="./app.html" }
-                      });
-                  }
-            }
-      });
+    },
+    });
   }
-)
+
+  function setErrorMsg(input, errormsgs) {
+      event.preventDefault();
+      const formControl = input.parentElement;
+        const small = formControl.querySelector('small');
+        formControl.className = "form-control error";
+        small.innerText = errormsgs;
+  }

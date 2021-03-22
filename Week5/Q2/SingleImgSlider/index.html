@@ -8,6 +8,7 @@
 </head>
 <body>
     <div class="slider">
+        <button class="leftArrow" id="prev"><img src="images/leftarrow.png"></button>
         <div class="slider-container">
             <div class="slider-images">
                 <div class="slides active"><img src="images/img1.jpg"></div>
@@ -23,33 +24,8 @@
                 </ul>
             </div>
         </div>
+        <button class="rightArrow" id="next"><img src="images/rightarrow.png"></button>
     </div>
-    <script>
-        var slides = document.getElementsByClassName("slides");
-        // const carouselSlide = document.querySelector('.slider-images');
-        var total_slides = document.getElementsByClassName("slides").length;
-        var dots = ul.getElementsByTagName("li");
-        // console.log(dots);
-        var i,index = 0;
-
-        function GoSlides(x){
-            if(x > total_slides-1){
-                index=0;
-            }
-            if(x<0){
-                index=total_slides-1;
-            }
-            if(x<total_slides && x>=0){
-                index=x;
-            }
-
-            for(i=0;i<total_slides;i++){
-                dots[i].classList.remove("active");
-                slides[i].classList.remove("active");
-            }
-            dots[x].classList.add("active");
-            slides[x].classList.add("active");
-        }
-    </script>  
+    <script src="indexStyle.js"></script>  
 </body>
 </html>

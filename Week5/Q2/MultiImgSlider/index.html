@@ -26,42 +26,17 @@
                     <div><img src="images/partner10.png"></div>
                 </div>
             </div>
+
+            <div class="indi">
+                <ul id="ul">
+                    <li class="active" onclick="GoSlides(0)"></li>
+                    <li onclick="GoSlides(1)"></li>
+                </ul>
+            </div>
         </div>
         <button class="rightArrow" id="next"><img src="images/rightarrow.png"></button>
     </div>
 
-    <script>
-        var slides = document.getElementsByClassName("group");
-        var total_slides = slides.length;
-        var i, index=0;
-        // console.log(total_slides);
-        document.getElementById("next").addEventListener("click",function(){
-            for(i=0;i<total_slides;i++){
-                index+=1;
-                GoSlides();
-            }
-        })
-
-        document.getElementById("prev").addEventListener("click",function(){
-            for(i=0;i<total_slides;i++){
-                index-=1;
-                GoSlides();
-            }
-        })
-
-        function GoSlides(){
-            if(index > total_slides-1){
-                index=0;
-            }
-            if(index<0){
-                index=total_slides-1;
-            }
-
-            for(i=0;i<total_slides;i++){
-                slides[i].classList.remove("active");
-            }
-            slides[index].classList.add("active");
-        }
-    </script>
+    <script src="indexStyle.js"></script>
 </body>
 </html>
