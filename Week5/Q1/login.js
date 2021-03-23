@@ -5,6 +5,9 @@ function validation(form) {
       setErrorMsg(document.getElementById('phone'), 'Enter the valid Mobile Number');
       return;
     }
+    else {
+      setErrorMsg(document.getElementById('phone'), 'Loading ...');
+    }
 
     var body = {
       "msisdn": document.getElementById('phone').value,
