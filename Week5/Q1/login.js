@@ -28,15 +28,9 @@ function validation(form) {
     },
     success: function(data) {
       if(data.token) {
-        $.ajax({
-                                url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
-                                type: 'GET',
-                                headers: {"Netco-JWT": data.token},
-                                success:function(res){ 
-                                    sessionStorage.setItem('token',true );
-                                    alert('You are Successfully logged in.');
-                  window.location.href="./app.html"; }
-                              });
+        sessionStorage.setItem('token',true );
+        sessionStorage.setItem('token1',data.token);
+        location.replace("./app.html");
       }
       else {
         setErrorMsg(document.getElementById('phone'), 'User is Invalid!');

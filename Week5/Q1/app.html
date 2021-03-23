@@ -3,13 +3,13 @@
 <head>
     <title>N-Frnds | App</title>
     <link rel="stylesheet" href="css/indexStyle.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <!-- <link rel="stylesheet" href="css/footer.css"> -->
     <link rel="stylesheet" href="css/indexPartnersPress.css">
     <link rel="stylesheet" href="css/indexSolutions.css">
     <link rel="stylesheet" href="css/indexWho.css">
 
     <link rel="stylesheet" href="css/solutionsResponsive.css">
-    <link rel="stylesheet" href="css/FooterResponsive.css">
+    <!-- <link rel="stylesheet" href="css/FooterResponsive.css"> -->
     <meta charset="utf-8">
     <meta name = "viewport" content = "width=device-width, minimum-scale=1, maximum-scale=1">
 
@@ -20,11 +20,11 @@
 </head>
 
 <body>
-    <div class="header" id="header">
+    <div class="header" id="header" style="box-shadow: 1px 1px 8px grey;">
         <a href="index.html">
-          <img class="logo-img" id="logo-img" src="images/logo.png" alt="logo-img" />
+          <img class="logo-img" id="logo-img" src="images/logo_fixed.png" alt="logo-img" />
         </a>
-        <div class="others">
+        <!-- <div class="others">
           <div class="header-btn">
             <a style="text-decoration: none;" href="#">
                 <h3>About</h3></a>
@@ -43,14 +43,14 @@
               ><h3>Contact</h3></a
             >
           </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="active" id="active">
       <a href="index.html">
         <img class="logo-img" id="logo-img" src="images/logo_fixed.png" alt="logo-img" />
       </a>
-      <div class="others">
+      <!-- <div class="others">
         <div class="header-btn">
           <a style="text-decoration: none;" href="#">
               <h3>About</h3></a>
@@ -69,33 +69,28 @@
             ><h3>Contact</h3></a
           >
         </div>
-      </div>
+      </div> -->
     </div>
-
-    <!-- <div class="success">
-      <p class="closebtn" style="margin: 0;padding: 0;">×</p>
-      You are <b>Successfully</b> logged in.
-    </div> -->
 
     <div class="header-sm topnav" id="myTopnav">
       <a href="index.html"><img src="images/logo_fixed.png" class="Active"></a>
-      <a href="javascript:void(0);" class="icon" onclick="myfunction()">&#9776;</a>
+      <!-- <a href="javascript:void(0);" class="icon" onclick="myfunction()">&#9776;</a>
       <a class="dropdown-links link1" href="#">About</a>
       <a class="dropdown-links" href="index.html#sols">Solutions</a>
       <a class="dropdown-links" href="#">Press</a>
-      <a class="dropdown-links link4" href="#">Contact</a>
+      <a class="dropdown-links link4" href="#">Contact</a> -->
     </div>
     
 
     <div class="indexPage">
-        <div class="intro">
+        <div class="intro" style="background: none;">
             <div class="intro-info">
-              <h1>Coming Soon...</h1>
+              <h1 style="color: black;">Coming Soon...</h1>
             </div>
         </div>
     </div>
 
-    <div class="footer">
+    <!-- <div class="footer">
         <img
           class="stars"
           src="images/footer_stars.svg" alt="footer-stars"
@@ -128,7 +123,7 @@
           Designed by
           <a href="#" target="_blank">Studio Ujwal</a>
         </p>
-    </div>
+    </div> -->
 
     <script>
         window.addEventListener("scroll", function () {
@@ -173,6 +168,29 @@
         myFunction(x) // Call listener function at run time
         x.addListener(myFunction)
     </script>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+
+      const token = sessionStorage.getItem('token1');
+      $.ajax({
+        url: "https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData",
+        type: 'GET',
+        headers: {
+          "Content-Type": "application/json",
+          "Netco-JWT": token,
+        },
+        //data: JSON.stringify(data.token),
+        success: function(data) {
+          console.log('api hit successfully');
+        },
+        error: function(data) {
+          console.log('api failed');
+        }
+      })
+    </script>
+
 </body>
 
 </html>
