@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Progress Bar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <h1>JavaScript Progress Bar</h1>
+    
+    <div class="circularBar">
+      <div class="circle">
+        <div class="circle__fill">0%</div>
+        <div class="circleBarFill">
+          <svg width="250" height="250">
+            <circle class="progress" cx="125" cy="125" r="125" fill="none"
+              stroke="#4caf50" stroke-width="23px"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <span class="loader"><span class="percent">0%</span></span>
+    <input class="input" value="0" type="range" min="0" max="100" />
+    <script src="index.js"></script>
+  </body>
+</html>
