@@ -18,10 +18,16 @@
   margin-top: 20vh;
   margin-bottom: 20px;
   position: relative;
-  /* z-index: 10; */
   display: flex;
   justify-content: flex-end;
-  padding: 7px;
+  padding-top: 8px;
+  padding-right: 8px;
+}
+
+.sort {
+  margin-right: 5px;
+  font-weight: bold;
+  margin-top: 5px;
 }
 
 .dropdown-menu select {
@@ -179,6 +185,10 @@ button {
 
 @media screen and (max-width: 768px) {
   .dropdown-menu {
-    left: 0vh;
+    justify-content: flex-start;
+    padding-left: 7px;
+  }
+  .dropdown-menu select {
+    width: 110px;
   }
 }

@@ -1,21 +1,20 @@
-const wholesalersDropdown = document.querySelector('#wholesalers');
 const outletsDropdown = document.querySelector('#outlets');
 const categoriesDiv = document.querySelector('.catogeries');
 const productsContainer = document.querySelector('.card-container');
+const wholesalersDropdown = document.querySelector('#wholesalers');
 
 const getLoginData = localStorage.getItem('userData');
 const parseLoginData = JSON.parse(getLoginData);
 
 const initaialDataUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/initialData';
 const userUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/user';
-const wholesalersUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/whs/v2';
 const outletsUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/outlets/v2';
 const categoriesUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/catalog?whsId=';
 const categoriesPreImgUrl = 'https://res.cloudinary.com/nfrnds/image/upload/fmcgdd';
+const wholesalersUrl = 'https://netco-indo-test.nfrnds.net:20003/fmcg-dd/whs/v2';
 
 let productsCatalog = [];
 let categories = [];
-
 
 const wholesalersHandler = (res) => {
     Array.from(wholesalersDropdown.children).forEach(ele => ele.remove());
